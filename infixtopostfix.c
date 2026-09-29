@@ -33,9 +33,7 @@ int main()
     for (i = 0; infix[i] != '\0'; i++)
     {
         ch = infix[i];
-        if ((ch >= 'A' && ch <= 'Z') ||
-            (ch >= 'a' && ch <= 'z') ||
-            (ch >= '0' && ch <= '9'))
+        if ((ch >= 'A' && ch <= 'Z') ||(ch >= 'a' && ch <= 'z') ||(ch >= '0' && ch <= '9'))
         {
             printf("%c", ch);
         }
@@ -60,13 +58,9 @@ int main()
                    priority(stack[top]) >= priority(ch))
             {
                 printf("%c", pop());
-            }
-
-            push(ch);
+            }push(ch);
         }
     }
-
-    // Pop remaining operators
     while (top != -1)
     {
         printf("%c", pop());
