@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int a[100], n, i, pos, value;
+    int a[100], n, i, p, v;
 
     printf("Enter number of elements: ");
     scanf("%d", &n);
@@ -11,12 +11,13 @@ int main() {
         scanf("%d", &a[i]);
 
     printf("Enter position and value to insert: ");
-    scanf("%d %d", &pos, &value);
+    scanf("%d", &p);
+    scanf("%d", &v);
 
-    for(i = n; i >= pos; i--)
+    for(i = n; i >= p; i--)
         a[i] = a[i - 1];
 
-    a[pos - 1] = value;
+    a[p - 1] = v;
     n++;
 
     printf("Array after insertion:\n");
