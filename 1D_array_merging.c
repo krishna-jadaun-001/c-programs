@@ -17,12 +17,9 @@ int main() {
     printf("Enter elements of second array:\n");
     for(i = 0; i < n2; i++)
         scanf("%d", &b[i]);
-
-    // Copy first array into third array
     for(i = 0; i < n1; i++)
         c[i] = a[i];
 
-    // Copy second array after first array
     for(i = 0; i < n2; i++)
         c[n1 + i] = b[i];
 
