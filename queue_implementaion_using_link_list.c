@@ -34,11 +34,6 @@ void enqueue(int y)
     new = (struct node *)malloc(sizeof(struct node));
     new->data = y;
     new->next = NULL;
-    if (f == NULL)
-    {
-        f = new;
-        r = new;
-    }
     else
     {
         r->next = new;
